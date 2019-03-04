@@ -1,0 +1,175 @@
+.main{
+  display: block;
+  height: calc(100vh - 51px);
+  background-color: #DDDDDD;
+  .main__container{
+    padding-top: 2em;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    .create-site{
+      .create-site__container{
+        display: flex;
+        flex-direction: column;
+        .create-site__label{
+          font-family: 'Nunito Sans';
+          font-size: 1.2em;
+          color:#100e22;
+        }
+        .create-site__btn{
+          outline: none;
+          border: none;
+          background-color: #100e22;
+          color:#dddddd;
+          font-family: 'Nunito Sans';
+          font-size: 1.4em;
+          cursor: pointer;
+          &:active{
+            background-color: #787878;;
+          }
+        }
+        .create-site__input{
+          margin-bottom: .5em;
+          margin-top: .5em;
+          border: 1px solid #100e22;
+          background-color: #DDDDDD;
+          outline: none;
+          font-family: 'Nunito Sans';
+          color:#100e22;
+          font-size: 1.4em;
+          &:active{
+            background-color: #100e22;
+            color:#dddddd;
+          }
+          &:focus{
+            background-color: #100e22;
+            color:#dddddd;
+          }
+        }
+      }
+    }
+    .site-list{
+      margin-left: 2em;
+      .site-list__container{
+        .site-list__header{
+          font-family: 'Nunito Sans';
+          font-size: 1.2em;
+          color:#100e22;
+        }
+        .site-list__items{
+          .site-list__items-container{
+            display: flex;
+            flex-direction: column;
+            .site-item{
+              display: flex;
+              margin-top: 1em;
+              flex-direction: row;
+              justify-content: flex-start;
+              .site-item__name{
+                font-family: 'Nunito Sans';
+                font-size: 1.2em;
+                align-self: center;
+                padding-right: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.modal-hidden{
+  display: none;
+}
+.modal{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  .modal-layer{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    z-index: 90;
+  }
+  .modal-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    min-height: 300px;
+    min-width: 500px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    .modal--header{
+      display: flex;
+      flex-direction: row;
+      min-height: 50px;
+      .modal--header__text{
+        flex-basis: 100%;
+        font-family: 'Nunito Sans';
+        font-size: 1.2em;
+        color:#100e22;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 1em;
+        align-self: center;
+      }
+      .square-container{
+        display: flex;
+        flex-basis: 100%;
+        flex-direction: row;
+        justify-content: flex-end;
+        position: relative;
+        .square{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          .square-item{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: all ease 0.5s;
+            &:hover{
+              &:before{
+                background-color: #dddddd;
+              }
+              &:after{
+                background-color: #dddddd;
+              }
+            }
+            &:before{
+              content: "";
+              display: inline-block;
+              width: 100%;
+              height: 5px;
+              background-color: #000;
+              position: absolute;
+              top: 50%;
+              left:50%;
+              transform: translate(-50%,-50%) rotate(45deg);
+              transition: all ease 0.5s;
+            }
+            &:after{
+              content: "";
+              display: inline-block;
+              width: 100%;
+              height: 5px;
+              background-color: #000;
+              position: absolute;
+              top: 50%;
+              left:50%;
+              transform: translate(-50%,-50%) rotate(-45deg);
+              transition: all ease 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

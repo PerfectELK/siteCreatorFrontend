@@ -1,0 +1,61 @@
+<script type="text/x-template" id="{id}">
+    <div class="main">
+        <div class="main__container">
+            <div class="create-site">
+                <div class="create-site__container">
+                    <label class="create-site__label">Название:</label>
+                    <input type="text" class="create-site__input site_name">
+                    <button class="create-site__btn">
+                        Создать сайт
+                    </button>
+                </div>
+            </div>
+            <div class="site-list">
+                <div class="site-list__container">
+                    <h2 class="site-list__header">Список сайтов:</h2>
+                    <div class="site-list__items">
+                        <div class="site-list__items-container">
+                            <div class="site-item">
+                                <h3 class="site-item__name">
+                                    Site name
+                                </h3>
+                                <button class="site-item__change site__btn" v-on:click="changeSiteModal">Изменить</button>
+                                <button class="site-item__delete site__btn" v-on:click="deleteSiteModal">Удалить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" :class="{'modal-hidden' : modalClose}">
+            <div class="modal__block">
+                <div class="modal-layer" v-on:click="modalClose = !modalClose"></div>
+                <div class="modal-item">
+                    <div class="modal--header">
+                        <h1 class="modal--header__text">
+                            Изменение сайта
+                        </h1>
+                        <div class="square-container">
+                            <div class="square">
+                                <div class="square-item" v-on:click="modalClose = !modalClose">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal--body">
+                        <component v-bind:is="currentModal"></component>
+                    </div>
+                    <div class="modal--footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</script>
+<script type="text/x-template" id="siteDeleteForm">
+<div>I delete site</div>
+</script>
+<script type="text/x-template" id="siteChangeForm">
+<div>I change site</div>
+</script>

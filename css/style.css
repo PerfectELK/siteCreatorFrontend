@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.site__btn {
+  outline: none;
+  border: none;
+  background-color: #100e22;
+  color: #dddddd;
+  font-family: 'Nunito Sans';
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.site__btn:active {
+  background-color: #787878;
+}
+.main {
+  display: block;
+  height: -webkit-calc(100vh - 51px);
+  height: calc(100vh - 51px);
+  background-color: #DDDDDD;
+}
+
+.main .main__container {
+  padding-top: 2em;
+  margin-left: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.main .main__container .create-site .create-site__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.main .main__container .create-site .create-site__container .create-site__label {
+  font-family: 'Nunito Sans';
+  font-size: 1.2em;
+  color: #100e22;
+}
+
+.main .main__container .create-site .create-site__container .create-site__btn {
+  outline: none;
+  border: none;
+  background-color: #100e22;
+  color: #dddddd;
+  font-family: 'Nunito Sans';
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.main .main__container .create-site .create-site__container .create-site__btn:active {
+  background-color: #787878;
+}
+
+.main .main__container .create-site .create-site__container .create-site__input {
+  margin-bottom: .5em;
+  margin-top: .5em;
+  border: 1px solid #100e22;
+  background-color: #DDDDDD;
+  outline: none;
+  font-family: 'Nunito Sans';
+  color: #100e22;
+  font-size: 1.4em;
+}
+
+.main .main__container .create-site .create-site__container .create-site__input:active {
+  background-color: #100e22;
+  color: #dddddd;
+}
+
+.main .main__container .create-site .create-site__container .create-site__input:focus {
+  background-color: #100e22;
+  color: #dddddd;
+}
+
+.main .main__container .site-list {
+  margin-left: 2em;
+}
+
+.main .main__container .site-list .site-list__container .site-list__header {
+  font-family: 'Nunito Sans';
+  font-size: 1.2em;
+  color: #100e22;
+}
+
+.main .main__container .site-list .site-list__container .site-list__items .site-list__items-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.main .main__container .site-list .site-list__container .site-list__items .site-list__items-container .site-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.main .main__container .site-list .site-list__container .site-list__items .site-list__items-container .site-item .site-item__name {
+  font-family: 'Nunito Sans';
+  font-size: 1.2em;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding-right: 1em;
+}
+
+.modal-hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal .modal-layer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+}
+
+.modal .modal-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  min-height: 300px;
+  min-width: 500px;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.modal .modal-item .modal--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  min-height: 50px;
+}
+
+.modal .modal-item .modal--header .modal--header__text {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  font-family: 'Nunito Sans';
+  font-size: 1.2em;
+  color: #100e22;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding-left: 1em;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.modal .modal-item .modal--header .square-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.modal .modal-item .modal--header .square-container .square {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.modal .modal-item .modal--header .square-container .square .square-item {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.modal .modal-item .modal--header .square-container .square .square-item:hover:before {
+  background-color: #dddddd;
+}
+
+.modal .modal-item .modal--header .square-container .square .square-item:hover:after {
+  background-color: #dddddd;
+}
+
+.modal .modal-item .modal--header .square-container .square .square-item:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.modal .modal-item .modal--header .square-container .square .square-item:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+.navbar {
+  background-color: #100e22;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar-list__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar-list__container .navbar-list__item {
+  padding-left: 10px;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 10px;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar-list__container .navbar-list__item > a {
+  color: #dddddd;
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-size: 1.2em;
+  font-weight: bolder;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar-list__container .navbar-list__item:hover {
+  background-color: #dddddd;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar-list__container .navbar-list__item:hover > a {
+  color: #100e22;
+}

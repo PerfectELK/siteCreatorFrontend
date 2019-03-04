@@ -50,6 +50,26 @@
                     </div>
                 </div>
             </div>
+            <div class="config-list">
+                <div class="config-list__container">
+                    <h2 class="config-list__header">Список характеристик сервера</h2>
+                    <div class="config">
+                        <div class="config__container">
+                            <div class="config-item">
+                                <h3 class="config-item__name">
+                                    Пыхыпы
+                                </h3>
+                                <strong class="config-item__version">
+                                    Version 1488
+                                </strong>
+                                <p class="config-item__description">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam commodi consectetur consequuntur distinctio dolor esse facere id ipsa ipsum libero magni praesentium quae quaerat quam quibusdam, quidem quis ut! Sed!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="modal" :class="{'modal-hidden' : modalClose}">
             <div class="modal__block">
@@ -57,7 +77,7 @@
                 <div class="modal-item">
                     <div class="modal--header">
                         <h1 class="modal--header__text">
-                            Изменение сайта
+
                         </h1>
                         <div class="square-container">
                             <div class="square">
@@ -67,7 +87,7 @@
                         </div>
                     </div>
                     <div class="modal--body">
-                        <component v-bind:is="currentModal"></component>
+                        <component v-on:quit="modalClose = !modalClose" v-bind:is="currentModal"></component>
                     </div>
                     <div class="modal--footer">
                     </div>
@@ -78,10 +98,43 @@
 
 </script>
 <script type="text/x-template" id="siteDeleteForm">
-<div>I delete site</div>
+<div class="modal-body__delete">
+    <div class="delete-container">
+        <h1>Удалить сайт {Имя сайта}?</h1>
+        <div class="delete-btn__container">
+            <button class="btn-yes">
+                Да
+            </button>
+            <button class="btn-no" v-on:click="quit">
+                Нет
+            </button>
+        </div>
+    </div>
+</div>
 </script>
 <script type="text/x-template" id="siteChangeForm">
-<div>I change site</div>
+<div class="modal-body__change">
+    <div class="change-container">
+        <h1>Изменение сайта</h1>
+        <div class="input-container">
+            <label for="name">Название:</label>
+            <input type="text" id="name">
+            <label for="apache">Конфиг apache2:</label>
+            <textarea name="" id="apache" cols="30" rows="10"></textarea>
+            <label for="nginx">Конфиг nginx:</label>
+            <textarea name="" id="nginx" cols="30" rows="10"></textarea>
+            <div class="btn-container">
+                <button class="save-btn" v-on:click="change">
+                    Сохранить
+                </button>
+                <button class="cancel-btn" v-on:click="quit">
+                    Отмена
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
 </script>
  <script type="text/x-template" id="options">
     <div>

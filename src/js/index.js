@@ -5,6 +5,14 @@ var modalDelete = Vue.component('modal-body',{
 
         }
     },
+    methods:{
+      delete:function(){
+          console.log('site was deleted');
+      },
+      quit:function(){
+          this.$emit('quit');
+      }
+    },
     template:'#siteDeleteForm'
 });
 
@@ -12,6 +20,14 @@ var modalChange = Vue.component('modal-body',{
     data:function(){
         return{
 
+        }
+    },
+    methods:{
+        change:function(){
+            console.log('site was changed');
+        },
+        quit:function(){
+            this.$emit('quit');
         }
     },
     template:'#siteChangeForm',

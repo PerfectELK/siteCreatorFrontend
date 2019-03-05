@@ -151,15 +151,53 @@ table {
 .site__btn:active {
   background-color: #787878;
 }
+body {
+  overflow-X: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .main .main__container {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-left: 0 !important;
+  }
+
+  .main .main__container .create-site {
+    width: 85%;
+  }
+
+  .main .main__container .site-list {
+    margin-left: 0 !important;
+    margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .modal .modal-item {
+    min-width: 85% !important;
+  }
+}
+
 .main {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  height: -webkit-calc(100vh - 51px);
-  height: calc(100vh - 51px);
+  min-height: -webkit-calc(100vh - 51px);
+  min-height: calc(100vh - 51px);
   background-color: #DDDDDD;
 }
 
@@ -178,6 +216,7 @@ table {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  position: relative;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -238,6 +277,12 @@ table {
   margin-left: 2em;
 }
 
+@media screen and (max-width: 1200px) {
+  .main .main__container .site-list {
+    width: 85%;
+  }
+}
+
 .main .main__container .site-list .site-list__container .site-list__header {
   font-family: 'Nunito Sans';
   font-size: 1.2em;
@@ -253,6 +298,23 @@ table {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+@media screen and (max-width: 1200px) {
+  .main .main__container .site-list .site-list__container .site-list__items .site-list__items-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
 }
 
 .main .main__container .site-list .site-list__container .site-list__items .site-list__items-container .site-item {
@@ -279,6 +341,23 @@ table {
 
 .config-list {
   margin-left: 1em;
+}
+
+@media screen and (max-width: 1200px) {
+  .config-list {
+    margin-left: 0;
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .config-list .config-list__container .config-list__header {
+    text-align: center;
+  }
+
+  .config-list .config-list__container {
+    margin-top: 2em;
+  }
 }
 
 .config-list .config-list__container .config-list__header {
@@ -318,6 +397,12 @@ table {
   padding-top: 0.3em;
 }
 
+@media screen and (max-width: 1200px) {
+  .config-list .config-list__container .config .config__container .config-item .config-item__description {
+    max-width: 100% !important;
+  }
+}
+
 .config-list .config-list__container .config .config__container .config-item .config-item__version {
   font-family: 'Nunito Sans';
   font-size: 1em;
@@ -339,13 +424,26 @@ table {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
+}
+
+.modal .modal__block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .modal .modal-layer {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 90;
 }

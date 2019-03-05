@@ -1,7 +1,38 @@
+body {
+  overflow-X:hidden;
+}
+
+@media screen and (max-width : 1200px) {
+    .main{
+      .main__container{
+        flex-direction: column!important;
+        justify-content: center!important;
+        align-content: center;
+        align-items: center;
+        margin-left: 0!important;
+        .create-site{
+          width:85%;
+        }
+        .site-list{
+          margin-left: 0!important;
+          margin-top: 2em;
+        }
+      }
+    }
+}
+@media screen and (max-width : 650px) {
+  .modal{
+    .modal-item{
+      min-width:85%!important;
+    }
+  }
+
+}
 .main{
+  position: relative;
   display: flex;
   align-items: stretch;
-  height: calc(100vh - 51px);
+  min-height: calc(100vh - 51px);
   background-color: #DDDDDD;
   .main__container{
     padding-top: 2em;
@@ -10,6 +41,7 @@
     flex-direction: row;
     justify-content: space-around;
     flex:1;
+    position: relative;
     flex-wrap: wrap;
     .create-site{
       .create-site__container{
@@ -54,6 +86,11 @@
       }
     }
     .site-list{
+      @media screen and (max-width : 1200px) {
+        & {
+          width: 85%;
+        }
+      }
       margin-left: 2em;
       .site-list__container{
         .site-list__header{
@@ -66,7 +103,14 @@
           .site-list__items-container{
             display: flex;
             flex-direction: column;
+            @media screen and (max-width : 1200px) {
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: center;
+              align-items: center;
+            }
             .site-item{
+
               display: flex;
               margin-top: 1em;
               flex-direction: row;
@@ -86,9 +130,22 @@
 }
 
 .config-list{
-
+  @media screen and (max-width : 1200px) {
+    & {
+      margin-left: 0;
+      width: 85%;
+    }
+  }
   margin-left: 1em;
   .config-list__container{
+    @media screen and (max-width : 1200px) {
+      .config-list__header{
+        text-align: center;
+      }
+      & {
+        margin-top: 2em;
+      }
+    }
     .config-list__header{
       font-family: 'Nunito Sans';
       font-size: 1.2em;
@@ -108,6 +165,9 @@
             font-family: 'Nunito Sans';
             font-size: 0.9em;
             padding-top: 0.3em;
+            @media screen and (max-width : 1200px) {
+              max-width: 100% !important;
+            }
           }
           .config-item__version{
             font-family: 'Nunito Sans';
@@ -138,11 +198,23 @@
   position: absolute;
   top:0;
   left:0;
-  width: 100vw;
-  height: 100vh;
+  right: 0;
+  bottom: 0;
+  .modal__block{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
   .modal-layer{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
     background-color: rgba(0,0,0,.5);
     z-index: 90;
   }

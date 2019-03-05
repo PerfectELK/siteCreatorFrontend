@@ -2,6 +2,17 @@
   background-color: #100e22;
   .navbar__block{
     .navbar__block-item{
+      display: flex;
+      flex-direction: row;
+
+      .navbar__icons{
+        display: flex;
+        flex-direction: row;
+      }
+
+
+
+
       .navbar-list__container{
         display: flex;
         flex-direction: row;

@@ -781,6 +781,26 @@ body {
   background-color: #100e22;
 }
 
+.navbar .navbar__block .navbar__block-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 .navbar .navbar__block .navbar__block-item .navbar-list__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -823,4 +843,101 @@ body {
 
 .navbar .navbar__block .navbar__block-item .navbar-list__container .navbar-list__item:hover > a {
   color: #100e22;
+}
+.options {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: -webkit-calc(100vh - 51px);
+  min-height: calc(100vh - 51px);
+  background-color: #DDDDDD;
+}
+
+.options .options__container {
+  padding-top: 2em;
+  margin-left: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.options .options__container .options-presets {
+  width: 100%;
+}
+
+.options .options__container .options-presets .options-presets__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.options .options__container .options-presets .options-presets__container .presets-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.options .options__container .options-presets .options-presets__container .presets-list .presets-list__label .label {
+  font-family: 'Nunito Sans';
+  font-size: 1.2em;
+  font-weight: bolder;
+  color: #100e22;
+}
+
+.options .options__container .options-presets .options-presets__container .presets-list .preset-list__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.options .options__container .options-presets .options-presets__container .presets-list .preset-list__items .preset-list__item {
+  margin-top: 1em;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+}
+
+.options .options__container .options-presets .options-presets__container .presets-list .preset-list__items .preset-list__item > button {
+  width: 90%;
+  outline: none;
+  border: none;
+  background-color: #100e22;
+  color: #dddddd;
+  font-family: 'Nunito Sans';
+  font-size: 1.4em;
+  cursor: pointer;
+}
+
+.options .options__container .options-presets .options-presets__container .presets-list .preset-list__items .preset-list__item > button:active {
+  background-color: #787878;
 }

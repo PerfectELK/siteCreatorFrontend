@@ -54,17 +54,17 @@ body {
           color:#100e22;
         }
         .create-site__btn{
-          outline: none;
-          border: none;
-          background-color: #100e22;
-          color:#dddddd;
-          font-family: 'Nunito Sans';
-          font-size: 1.4em;
-          cursor: pointer;
-          &:active{
-            background-color: #787878;;
-          }
-        }
+           outline: none;
+           border: none;
+           background-color: #100e22;
+           color:#dddddd;
+           font-family: 'Nunito Sans';
+           font-size: 1.4em;
+           cursor: pointer;
+           &:active{
+             background-color: #787878;;
+           }
+         }
         .create-site__input{
           margin-bottom: .5em;
           margin-top: .5em;

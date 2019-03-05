@@ -1,0 +1,58 @@
+.options {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - 51px);
+  background-color: #DDDDDD;
+  .options__container {
+    padding-top: 2em;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    position: relative;
+    flex-wrap: wrap;
+    .options-presets{
+      width: 100%;
+      .options-presets__container{
+        display: flex;
+        flex-direction: column;
+        .presets-list{
+          display: flex;
+          flex-direction: column;
+          .presets-list__label{
+            .label{
+              font-family: 'Nunito Sans';
+              font-size: 1.2em;
+              font-weight: bolder;
+              color:#100e22;
+            }
+          }
+          .preset-list__items{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .preset-list__item{
+              margin-top: 1em;
+              flex-basis: 25%;
+              & > button{
+                width: 90%;
+                outline: none;
+                border: none;
+                background-color: #100e22;
+                color:#dddddd;
+                font-family: 'Nunito Sans';
+                font-size: 1.4em;
+                cursor: pointer;
+                &:active{
+                  background-color: #787878;;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

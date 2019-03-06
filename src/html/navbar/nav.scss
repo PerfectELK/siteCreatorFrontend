@@ -22,8 +22,15 @@
     transform: translate(-50%,-50%) rotate(315deg);
   }
 }
-
+body{
+  margin-top: 51px;
+}
 .navbar{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
   background-color: #100e22;
   .navbar__block{
     .navbar__block-item{
@@ -43,8 +50,8 @@
             margin-right: .5em;
             display: block;
             position: relative;
-            width: 40px;
-            height: 40px;
+            width: 20px;
+            height: 20px;
             cursor: pointer;
             &:hover > .turn {
               animation: turnHover .5s linear ;
@@ -71,8 +78,8 @@
             }
             .resize{
               position: absolute;
-              width: 40px;
-              height: 40px;
+              width: 20px;
+              height: 20px;
               box-sizing: border-box;
               cursor: pointer;
               transition: all ease 0.5s;

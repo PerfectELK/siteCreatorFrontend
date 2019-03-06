@@ -777,6 +777,78 @@ body {
 .modal-body__change .change-container .input-container .btn-container button:nth-child(2) {
   margin-left: .3em;
 }
+@-webkit-keyframes turnHover {
+  from {
+    -webkit-transform: rotate(0deg) translateY(-50%);
+    transform: rotate(0deg) translateY(-50%);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateY(-50%);
+    transform: rotate(360deg) translateY(-50%);
+  }
+}
+
+@keyframes turnHover {
+  from {
+    -webkit-transform: rotate(0deg) translateY(-50%);
+    transform: rotate(0deg) translateY(-50%);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateY(-50%);
+    transform: rotate(360deg) translateY(-50%);
+  }
+}
+
+@-webkit-keyframes closeHoverB {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(405deg);
+    transform: translate(-50%, -50%) rotate(405deg);
+  }
+}
+
+@keyframes closeHoverB {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(405deg);
+    transform: translate(-50%, -50%) rotate(405deg);
+  }
+}
+
+@-webkit-keyframes closeHoverA {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(315deg);
+    transform: translate(-50%, -50%) rotate(315deg);
+  }
+}
+
+@keyframes closeHoverA {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(315deg);
+    transform: translate(-50%, -50%) rotate(315deg);
+  }
+}
+
 .navbar {
   background-color: #100e22;
 }
@@ -792,6 +864,7 @@ body {
 }
 
 .navbar .navbar__block .navbar__block-item .navbar__icons {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -799,6 +872,118 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons .nav-icons__container {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons .nav-icons__container .icon-item__block {
+  margin-right: .5em;
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons .nav-icons__container .icon-item__block:hover > .turn {
+  -webkit-animation: turnHover .5s linear;
+  animation: turnHover .5s linear;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons .nav-icons__container .icon-item__block:hover > .close:before {
+  -webkit-animation: closeHoverB .5s linear;
+  animation: closeHoverB .5s linear;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons .nav-icons__container .icon-item__block:hover > .close:after {
+  -webkit-animation: closeHoverA .5s linear;
+  animation: closeHoverA .5s linear;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons .nav-icons__container .icon-item__block:hover > .resize {
+  -webkit-transform: rotate3d(180, 0, 0, -180deg);
+  transform: rotate3d(180, 0, 0, -180deg);
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons .nav-icons__container .icon-item__block .turn {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #dddddd;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons .nav-icons__container .icon-item__block .resize {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  border: 5px solid #06af23;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons .nav-icons__container .icon-item__block .close {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons .nav-icons__container .icon-item__block .close:before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background-color: #af0000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.navbar .navbar__block .navbar__block-item .navbar__icons .nav-icons__container .icon-item__block .close:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background-color: #af0000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+  -webkit-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
 }
 
 .navbar .navbar__block .navbar__block-item .navbar-list__container {

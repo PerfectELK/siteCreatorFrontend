@@ -1,3 +1,28 @@
+@keyframes turnHover {
+  from{
+    transform: rotate(0deg) translateY(-50%);
+  }
+  to{
+    transform: rotate(360deg) translateY(-50%);
+  }
+}
+@keyframes closeHoverB {
+  from{
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  to{
+    transform: translate(-50%,-50%) rotate(405deg);
+  }
+}
+@keyframes closeHoverA {
+  from{
+    transform: translate(-50%,-50%) rotate(-45deg);
+  }
+  to{
+    transform: translate(-50%,-50%) rotate(315deg);
+  }
+}
+
 .navbar{
   background-color: #100e22;
   .navbar__block{
@@ -6,8 +31,88 @@
       flex-direction: row;
 
       .navbar__icons{
+        width:100%;
         display: flex;
         flex-direction: row;
+        .nav-icons__container{
+          justify-content: flex-end;
+          align-items: center;
+          width:100%;
+          display: flex;
+          .icon-item__block{
+            margin-right: .5em;
+            display: block;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            &:hover > .turn {
+              animation: turnHover .5s linear ;
+            }
+            &:hover > .close {
+              &:before{
+                animation: closeHoverB .5s linear ;
+              }
+              &:after{
+                animation: closeHoverA .5s linear ;
+              }
+            }
+            &:hover > .resize{
+              transform: rotate3d(180,0,0,-180deg);
+            }
+            .turn{
+              position: absolute;
+              width: 100%;
+              height: 5px;
+              background-color: #dddddd;
+              top:50%;
+              transform: translateY(-50%);
+
+            }
+            .resize{
+              position: absolute;
+              width: 40px;
+              height: 40px;
+              box-sizing: border-box;
+              cursor: pointer;
+              transition: all ease 0.5s;
+              border: 5px solid #06af23;
+              border-radius:50%;
+              cursor: pointer;
+            }
+            .close{
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              cursor: pointer;
+              transition: all ease 0.5s;
+              &:before{
+                content: "";
+                display: inline-block;
+                width: 100%;
+                height: 5px;
+                background-color: #af0000;
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%,-50%) rotate(45deg);
+                transition: all ease 0.5s;
+              }
+              &:after{
+                content: "";
+                display: inline-block;
+                width: 100%;
+                height: 5px;
+                background-color: #af0000;
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%,-50%) rotate(-45deg);
+                transition: all ease 0.5s;
+              }
+            }
+          }
+        }
       }
 
 

@@ -7,6 +7,18 @@
   }
 }
 
+@keyframes btnClick {
+  0%{
+    border: 1px solid #100e22;
+  }
+  50%{
+    border: 2px solid #100e22;
+  }
+  100%{
+    border: 1px solid #100e22;
+  }
+}
+
 
 .options {
   position: relative;
@@ -22,6 +34,44 @@
     position: relative;
     flex-wrap: wrap;
 
+
+    .options-submit{
+      display: flex;
+      flex-basis: 100%;
+      margin-right: 2em;
+      .options-submit__container{
+        display: flex;
+        flex-direction: row;
+        flex-basis: 100%;
+        justify-content: flex-end;
+        .submit{
+          button{
+            margin-bottom: .5em;
+            margin-top: .5em;
+            border: 1px solid #100e22;
+            background-color: #100e22;
+            cursor: pointer;
+            outline: none;
+            font-family: 'Nunito Sans';
+            color:#dddddd;
+            font-size: 1.4em;
+            &:active{
+              background-color: #dddddd;
+              color:#100e22;
+            }
+            &:focus{
+              animation:btnClick 0.1s linear;
+            }
+            &:hover{
+              background-color: #dddddd;
+              color:#100e22;
+            }
+          }
+        }
+      }
+    }
+
+
     .options-data{
       display: flex;
       flex-basis: 100%;
@@ -32,7 +82,8 @@
         flex-basis: 100%;
         flex-direction:row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
+
         .options-data__inputs{
           display: flex;
           flex-direction: column;
@@ -72,12 +123,17 @@
           }
         }
         .options-data__inputs-right{
+          margin-left: 2em;
+          margin-right: 2em;
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
+          flex-grow: 1;
+
           @media screen and (max-width: 1160px) {
             &{
               flex-basis: 100%;
+              margin: 0 2em 0 0;
               .textarea__container{
                 padding: 0!important;
                 width: 100%;
@@ -89,10 +145,13 @@
             }
           }
           .textarea__container{
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+
             .textarea__option{
+              width: 100%;
               margin-bottom: .5em;
               margin-top: .5em;
               border: 1px solid #100e22;
@@ -179,7 +238,10 @@
                 font-size: 1.4em;
                 cursor: pointer;
                 &:active{
-                  background-color: #787878;;
+                  background-color: #787878;
+                }
+                &:focus{
+                  background-color: #787878;
                 }
               }
             }

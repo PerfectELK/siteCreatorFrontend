@@ -59,3 +59,30 @@ table {
     background-color: #787878;;
   }
 }
+
+
+.scrollbar{
+  position: fixed;
+  top:0;
+  right: 0;
+  height: 100%;
+  width:10px;
+  background-color: #1ecbc6;
+  z-index: 1;
+  .scrollbar__container{
+    .scroll-item{
+      position: absolute;
+      top:0;
+      right: 0;
+      height: 20%;
+      width:10px;
+      background-color: #100e22;
+    }
+  }
+}
+
+body{
+  overflow-Y:hidden;
+  position: absolute;
+  width: 100%;
+}

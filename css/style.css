@@ -186,15 +186,6 @@ body {
     -webkit-box-direction: normal !important;
     -ms-flex-direction: column !important;
     flex-direction: column !important;
-    -webkit-box-pack: center !important;
-    -ms-flex-pack: center !important;
-    justify-content: center !important;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-left: 0 !important;
   }
 
   .main .main__container .create-site {
@@ -232,18 +223,20 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
   position: relative;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.main .main__container .create-site {
+  margin-top: 2em;
 }
 
 .main .main__container .create-site .create-site__container {
@@ -264,6 +257,7 @@ body {
 }
 
 .main .main__container .create-site .create-site__container .create-site__btn {
+  max-width: 400px;
   outline: none;
   border: none;
   background-color: #100e22;
@@ -278,6 +272,7 @@ body {
 }
 
 .main .main__container .create-site .create-site__container .create-site__input {
+  max-width: 400px;
   margin-bottom: .5em;
   margin-top: .5em;
   border: 1px solid #100e22;
@@ -299,7 +294,7 @@ body {
 }
 
 .main .main__container .site-list {
-  margin-left: 2em;
+  margin-top: 2em;
 }
 
 @media screen and (max-width: 1200px) {
@@ -319,10 +314,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1200px) {
@@ -347,13 +344,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-top: 1em;
-  -webkit-box-orient: horizontal;
+  margin-left: 0.5em;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  width: 300px;
 }
 
 .main .main__container .site-list .site-list__container .site-list__items .site-list__items-container .site-item .site-item__name {
@@ -365,7 +364,7 @@ body {
 }
 
 .config-list {
-  margin-left: 1em;
+  margin-top: 2em;
 }
 
 @media screen and (max-width: 1200px) {
